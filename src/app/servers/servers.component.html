@@ -1,2 +1,17 @@
+<label>Server Name</label>
+<!--<input
+	type="text"
+	class="form-control"
+	(input)="onUpdateServerName($event)">--><!-- one way binding -->
+<input
+	type="text"
+	class="form-control"
+	[(ngModel)]="serverName"> <!-- two ways binding, Forms Module is required for two-way-binding, by default imported to the app.module when using cli to create the angular app, this enable the ngModel directive-->
+	<!--<p>{{ serverName }}</p>-->
+<button class="btn btn-primary"
+[disabled]="!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
+<!--<p [innerText]="allowNewServer"></p>-->
+<p> {{ serverCreationStatus }} </p>
 <app-server></app-server>
 <app-server></app-server>

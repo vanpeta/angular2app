@@ -15,7 +15,7 @@ import { ServersComponent } from './servers/servers.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    FormsModule, //enables ngModel directive
     HttpModule
   ],
   providers: [],
